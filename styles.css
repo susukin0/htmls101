@@ -1,0 +1,72 @@
+
+
+body {
+    background-color: lightblue; /* background */
+    color: #420d09; /* Tüm metinlerin rengini beyaz yapar */
+    text-align: center; /* Metin ve nesneleri ortalar */
+    font-family: 'Arial', sans-serif; /* Font ayarı */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Sayfa yüksekliği ekran yüksekliği kadar olacak */
+    overflow: hidden; /* Taşan içerikleri gizler */
+    animation: glitch-animation 1s infinite;
+    animation: glow-animation 1s infinite;
+}
+#about {
+    max-width: 370px;	   	
+    margin-right: 50px;
+}
+
+input[type="submit"] {
+    margin-top: 40px; /* bosluk yukardan */
+    background-color: #120a8f; /* Arka plan rengi */
+    color: #fff; /* Metin rengi */
+    padding: 15px 25px; /* Buton içeriği ile kenarlık arasındaki mesafe */
+    cursor: pointer; /* Üzerine geldiğinde imleç tipi */
+    font-size: 16px; /* Yazı tipi boyutu */	
+    margin-bottom: 10px; /* bosluk alttan */
+}
+input[type="email"] {
+	margin-top: 10px; 
+	margin-right: 10px; /* sagdan bosluk */
+	margin-bottom: 10px;
+}	
+img {
+    margin-right: 50px;  
+    max-width: 100%; /* Resimlerin ekrana sığması için */
+    height: auto; /* Orantılı bir şekilde boyutlandırma yapar */
+} 
+.gif-container {
+	position: fixed;
+	bottom: 20%;	
+	left: 44%;
+        transform: translateX(-50%);
+	max-width: 80px;
+	width: 100%;
+}	
+
+@keyframes glitch-animation {
+    0%, 100% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translate(4px, -4px);
+    }
+    50% {
+        transform: translate(-2px, 2px);
+    }
+    75% {
+        transform: translate(-4px, 2px);
+    }	
+	
+}
+@keyframes glow-animation {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
